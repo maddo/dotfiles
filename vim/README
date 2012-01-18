@@ -1,0 +1,40 @@
+Maddo's Vim Settings
+--------------------
+
+To use this configuration exactly as it is (in win/mac), clone it into 
+~/.vim (backup your current .vim if it exists).
+
+Create a link for the .vimrc file, something like this:
+cd ~
+ln -s .vim/.vimrc .vimrc
+
+And create a file for local customizations
+touch ~/vimrc_local
+
+The git contains several plugins ready to go:
+-NERDTree
+-ScrollColor
+-assistant
+-debugger
+(This list may change or grow over time)
+
+Otherwise, browse the files and pick and choose useful elements.
+
+Mac users:
+If not already configured, there's a tweak for git to help with line 
+ending issues.
+
+git config --global core.autocrlf input
+
+Other Notes:
+I had some issues with the git-vim plugin working, but was able to
+resolve them by telling vim which shell to use.  I did this with
+a function in fish (my normal shell):
+
+function vim -d 'Vi improved'
+    set old_shell $SHELL
+    set SHELL /bin/sh
+    command vim $argv
+    set SHELL $old_shell
+end
+
