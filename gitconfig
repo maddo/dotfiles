@@ -1,0 +1,29 @@
+[user]
+	name =
+  email =
+[alias]
+  st = status
+  s = status -s
+  sw = checkout
+  co = checkout
+  ll = log --name-status --date=local --color-words
+  lb = log --oneline --decorate
+  di = diff --color-words -w
+  me = log --author=
+  reverse-commit = !sh -c 'git show -R $* | git apply' -
+  local = !sh -c 'git checkout --track -b $0 remotes/$0'
+  plog = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
+  ignore-tracked = update-index --assume-unchanged
+  unignore-tracked = update-index --no-assume-unchanged
+  ignore-untracked = !sh -c 'echo $0 >> .gitignore'
+  show-ignore-untracked = !sh -c 'cat .gitignore'
+  alias = !sh -c 'editgit'
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+[core]
+  editor = vim
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
