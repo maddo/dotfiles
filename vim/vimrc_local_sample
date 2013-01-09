@@ -1,0 +1,16 @@
+" Don't display these kinds of files
+let NERDTreeIgnore=[ '\.ncb$', '\.suo$', '\.vcproj\.RIMNET', '\.obj$',
+             \ '\.ilk$', '^BuildLog.htm$', '\.pdb$', '\.idb$',
+             \ '\.embed\.manifest$', '\.embed\.manifest.res$',
+             \ '\.intermediate\.manifest$', '\.pyc$', '\.DS_Store' ]
+
+" My Abbreviations
+iab phpdef <?php <CR><CR>?><Up>
+iab phpequal <?= ?><Left><Left><Left>
+iab mssg Messages::get('')<Left><Left> 
+iab brh (BaseRequestHandler)
+
+command Upload :!upload.py %;
+
+set t_Co=256
+colorscheme codeschool

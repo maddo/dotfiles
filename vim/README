@@ -6,17 +6,15 @@ To use this configuration exactly as it is (in win/mac), clone it into
 
 Create a link for the .vimrc file, something like this:
 cd ~
-ln -s .vim/.vimrc .vimrc
+ln -s /path/to/dotfiles/vim/vimrc .vimrc
 
 And create a file for local customizations
 touch ~/vimrc_local
 
-The git contains several plugins ready to go:
--NERDTree
--ScrollColor
--assistant
--debugger
-(This list may change or grow over time)
+The vimrc file expects pathogen to be installed. Haven't set that up here yet.
+Recommend:
+* command-t
+* NERDtree
 
 Otherwise, browse the files and pick and choose useful elements.
 
